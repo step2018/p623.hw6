@@ -5,6 +5,7 @@ import json,codecs
 import os
 import jinja2
 import cgi
+import logging
 #from bs4 import BeautifulSoup
 
 #with open("traindata2.xml") as traindata:
@@ -34,7 +35,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 class BaseHandler(webapp2.RequestHandler):
-    def render(self, html, values={}):
+    def render(self, html, values={"graph": json_dict}):
         template = JINJA_ENVIRONMENT.get_template(html)
         self.response.write(template.render(values))
 
