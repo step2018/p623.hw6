@@ -5,8 +5,7 @@ runtime: python27
 handlers:
 - url: /.*
   script: stephw6-2.app
-- url: /.*
-  script: trainData.app
+
 
 libraries:
 - name: webapp2

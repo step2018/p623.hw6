@@ -42,8 +42,6 @@ class MainHandler(BaseHandler):
     def get(self):
         self.render("stephw6-2Page1.html")
 
-PRESET_DATA_FILE="http://alice.fantasy-transit.appspot.com/net?format=json"
-
 class SabHandler(BaseHandler):
     def get(self):
         self.render("stephw6-2Page2.html")
